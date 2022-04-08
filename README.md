@@ -1,1 +1,1 @@
-# StuPlan_IosApplication
+# StuPlan_AndroidApplication
