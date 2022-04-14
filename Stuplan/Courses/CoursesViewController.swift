@@ -102,9 +102,6 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
                while(sqlite3_step(stmt) == SQLITE_ROW){
                    let courseId = sqlite3_column_int(stmt, 0)
                    let courseName = String(cString: sqlite3_column_text(stmt, 1))
-
-                   
-                   print("\(courseId)\(courseName)")
                    //adding values to list
                    courseList.append(CourseModel(courseId: Int(courseId), courseName: String(describing: courseName)))
                }

@@ -67,11 +67,8 @@ func populateCourseData(id:String){
 
                //traversing through all the records
                while(sqlite3_step(stmt) == SQLITE_ROW){
-                   let courseId = sqlite3_column_int(stmt, 0)
                    let courseName = String(cString: sqlite3_column_text(stmt, 1))
                    addCourseLabel.text = courseName
-                   
-                   print("\(courseId)\(courseName)")
                    //adding values to list
                    }
         sqlite3_finalize(stmt)
